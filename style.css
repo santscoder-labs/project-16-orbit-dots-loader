@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.loader span {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    animation: orbit 3s linear infinite;
+}
+
+.loader span::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: red;
+    border-radius: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 0 15px red;
+}
+
+.loader span:nth-child(1) { animation-duration: 2s;}
+.loader span:nth-child(2) { animation-duration: 3s;}
+.loader span:nth-child(3) { animation-duration: 4s;}
+.loader span:nth-child(4) { animation-duration: 5s;}
+.loader span:nth-child(5) { animation-duration: 6s;}
+.loader span:nth-child(6) { animation-duration: 7s;}
+.loader span:nth-child(7) { animation-duration: 8s;}
+.loader span:nth-child(8) { animation-duration: 9s;}
+.loader span:nth-child(9) { animation-duration: 10s;}
+.loader span:nth-child(10) { animation-duration: 11s;}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
